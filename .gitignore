@@ -1,0 +1,23 @@
+# Ignore ZIP files
+stitch_clube_do_botox_bayma_premium.zip
+
+# Ignore original unorganized images
+002.png
+botox.jpeg
+botox22.jpeg
+WhatsApp Image*.jpeg
+WhatsApp Image*.jpg
+benefícios do hipro*.png
+benefícios do hipro*.png
+
+# Ignore macOS system files
+.DS_Store
+Thumbs.db
+
+# Ignore screenshots
+Captura de Tela*.png
+Captura de Tela*.jpg
+
+# Ignore temporary folders
+resultados/
+stitch_clube_do_botox_bayma_premium/
