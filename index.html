@@ -58,13 +58,127 @@
             background: linear-gradient(to right, rgba(255, 248, 243, 0.95) 30%, rgba(255, 248, 243, 0.4) 60%, rgba(255, 248, 243, 0.1) 100%);
         }
 
+        /* ===== MOBILE OPTIMIZATIONS ===== */
         @media (max-width: 768px) {
             .hero-overlay {
-                background: linear-gradient(to bottom, rgba(255, 248, 243, 0.96) 60%, rgba(255, 248, 243, 0.75) 100%);
+                background: linear-gradient(to bottom, rgba(255, 248, 243, 0.97) 50%, rgba(255, 248, 243, 0.85) 100%);
             }
             .py-section-gap {
-                padding-top: 80px !important;
-                padding-bottom: 80px !important;
+                padding-top: 64px !important;
+                padding-bottom: 64px !important;
+            }
+
+            /* Hero mobile adjustments */
+            section.min-h-screen {
+                min-height: 85vh;
+            }
+
+            /* Gallery grid: 2 columns on mobile for a compact, scrollable view */
+            .gallery-grid-mobile {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px !important;
+            }
+            .gallery-grid-mobile .aspect-\[4\/5\] {
+                aspect-ratio: 3/4 !important;
+            }
+            .gallery-grid-mobile .p-10 {
+                padding: 16px !important;
+            }
+            .gallery-grid-mobile h3 {
+                font-size: 0.875rem !important;
+                margin-bottom: 4px !important;
+            }
+            .gallery-grid-mobile p {
+                font-size: 0.7rem !important;
+                line-height: 1.4 !important;
+            }
+            .gallery-grid-mobile span.absolute {
+                top: 8px !important;
+                left: 8px !important;
+                font-size: 7px !important;
+                padding: 4px 8px !important;
+            }
+
+            /* Section headings: smaller on mobile */
+            .mobile-heading {
+                font-size: 1.875rem !important;
+                line-height: 1.2 !important;
+            }
+            .mobile-subheading {
+                font-size: 1rem !important;
+            }
+
+            /* Testimonial section mobile fixes */
+            .testimonial-quote {
+                font-size: 1.25rem !important;
+                padding: 24px !important;
+            }
+
+            /* Plans section: tighter padding */
+            .plan-card-mobile {
+                padding: 24px !important;
+            }
+            .plan-card-mobile h3 {
+                font-size: 1.5rem !important;
+            }
+
+            /* Bonus cards: tighter padding */
+            .bonus-card-mobile {
+                padding: 24px !important;
+            }
+            .bonus-card-mobile h3 {
+                font-size: 1.375rem !important;
+            }
+            .bonus-image-mobile {
+                height: 180px !important;
+            }
+
+            /* FAQ: better touch targets */
+            .faq-item {
+                padding-top: 16px !important;
+                padding-bottom: 16px !important;
+            }
+
+            /* CTA section: tighter */
+            .cta-mobile {
+                padding: 40px 20px !important;
+            }
+            .cta-mobile h2 {
+                font-size: 1.75rem !important;
+            }
+            .cta-mobile p {
+                font-size: 1rem !important;
+                margin-bottom: 24px !important;
+            }
+
+            /* Footer: compact */
+            footer {
+                padding-top: 48px !important;
+                padding-bottom: 48px !important;
+            }
+
+            /* Monogram section: smaller circles */
+            .monogram-circle {
+                width: 180px !important;
+                height: 180px !important;
+            }
+
+            /* Features numbered list: less gap */
+            .features-grid-mobile {
+                gap: 32px 24px !important;
+            }
+        }
+
+        /* Extra small screens (iPhone SE, etc) */
+        @media (max-width: 380px) {
+            .gallery-grid-mobile .p-10 {
+                padding: 12px !important;
+            }
+            .gallery-grid-mobile h3 {
+                font-size: 0.75rem !important;
+            }
+            .gallery-grid-mobile p {
+                font-size: 0.65rem !important;
             }
         }
 
@@ -96,6 +210,10 @@
         .filter-gold {
             filter: invert(66%) sepia(21%) saturate(545%) hue-rotate(352deg) brightness(91%) contrast(85%);
         }
+
+        /* Smooth touch scrolling on iOS */
+        * { -webkit-tap-highlight-color: transparent; }
+        html { -webkit-text-size-adjust: 100%; }
     </style>
 </head>
 <body class="bg-background text-on-surface overflow-x-hidden selection:bg-secondary/30">
@@ -165,13 +283,13 @@
 <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full pt-32 pb-20">
 <div class="max-w-2xl fade-in">
 <span class="text-[12px] font-bold text-secondary uppercase letter-spacing-extra block mb-8">EXPERIÊNCIA PREMIUM</span>
-<h1 class="text-5xl md:text-7xl lg:text-8xl text-primary mb-8 leading-[1.05] tracking-tight">CLUBE DO BOTOX BAYMA</h1>
-<p class="headline-font text-2xl md:text-3xl italic text-on-surface-variant mb-10 leading-relaxed">Um ano inteiro de expressão leve, prevenção e cuidados contínuos.</p>
-<p class="text-lg text-on-surface-variant/80 max-w-lg mb-16 leading-relaxed">
+<h1 class="text-4xl md:text-7xl lg:text-8xl text-primary mb-6 md:mb-8 leading-[1.05] tracking-tight">CLUBE DO BOTOX BAYMA</h1>
+<p class="headline-font text-xl md:text-3xl italic text-on-surface-variant mb-8 md:mb-10 leading-relaxed">Um ano inteiro de expressão leve, prevenção e cuidados contínuos.</p>
+<p class="text-base md:text-lg text-on-surface-variant/80 max-w-lg mb-10 md:mb-16 leading-relaxed">
                 O Clube do Botox foi criado para mulheres que valorizam resultados naturais, acompanhamento próximo e um plano estruturado para manter a beleza ao longo do ano. Mais do que aplicações programadas, você passa a contar com uma estratégia contínua de prevenção e rejuvenescimento.
             </p>
 <div class="flex flex-col sm:flex-row gap-8 items-start">
-<a class="bg-primary text-on-primary text-[12px] font-bold px-14 py-7 letter-spacing-widest text-center hover:bg-secondary transition-all shadow-2xl inline-block uppercase" href="#cta-final">
+<a class="bg-primary text-on-primary text-[11px] md:text-[12px] font-bold px-10 md:px-14 py-5 md:py-7 letter-spacing-widest text-center hover:bg-secondary transition-all shadow-2xl inline-block uppercase w-full sm:w-auto" href="#cta-final">
                     QUERO FAZER PARTE DO CLUBE
                 </a>
 </div>
@@ -192,12 +310,12 @@
 </div>
 </section>
 <!-- Statement Banner -->
-<section class="bg-primary py-32 md:py-48 relative overflow-hidden">
+<section class="bg-primary py-20 md:py-48 relative overflow-hidden">
 <div class="absolute inset-0 flex justify-center items-center opacity-[0.03] pointer-events-none">
 <img alt="" class="h-full w-auto object-contain brightness-0 invert" src="logo.png"/>
 </div>
 <div class="px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto text-center relative z-10">
-<h2 class="text-3xl md:text-5xl text-on-primary italic leading-[1.4] font-light">
+<h2 class="text-2xl md:text-5xl text-on-primary italic leading-[1.4] font-light">
             "Enquanto o Botox cuida da expressão, os benefícios exclusivos do Clube cuidam da qualidade da sua pele."
         </h2>
 </div>
@@ -249,7 +367,7 @@
 
             <!-- Center Monogram -->
             <div class="md:col-span-4 flex justify-center py-8 md:py-0">
-                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-surface-container-low border border-secondary/20 flex items-center justify-center p-8 shadow-2xl transition-all duration-1000 hover:scale-105">
+                <div class="monogram-circle relative w-52 h-52 md:w-80 md:h-80 rounded-full bg-surface-container-low border border-secondary/20 flex items-center justify-center p-8 shadow-2xl transition-all duration-1000 hover:scale-105">
                     <div class="absolute inset-4 rounded-full border border-secondary/10 animate-[spin_60s_linear_infinite]"></div>
                     <img alt="Monograma Dra. Renata Bayma" class="w-1/2 h-auto object-contain brightness-0 filter-gold opacity-90 transition-transform duration-[2s] hover:rotate-12" src="logo.png"/>
                 </div>
@@ -288,11 +406,11 @@
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
 <div class="max-w-xl">
 <span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-6">A EXPERIÊNCIA</span>
-<h2 class="text-4xl md:text-6xl text-primary leading-tight">O que você ganha ao fazer parte do Clube?</h2>
+<h2 class="text-3xl md:text-6xl text-primary leading-tight mobile-heading">O que você ganha ao fazer parte do Clube?</h2>
 </div>
 <div class="h-px bg-secondary/30 flex-grow md:mx-12 hidden md:block"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16 md:gap-y-24 features-grid-mobile">
 <div class="flex gap-10 group">
 <span class="headline-font text-3xl text-secondary/40 italic flex-shrink-0">01</span>
 <div>
@@ -334,11 +452,11 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 <!-- Bonus 1 -->
 <div class="bg-surface border border-secondary/10 flex flex-col overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
-<div class="h-80 bg-surface-container flex items-center justify-center relative overflow-hidden">
+<div class="h-52 md:h-80 bg-surface-container flex items-center justify-center relative overflow-hidden bonus-image-mobile">
 <img alt="Dra. Renata Bayma Logo" class="w-1/3 opacity-10 grayscale brightness-0 group-hover:scale-105 transition-transform duration-[2s]" src="logo.png"/>
 <div class="absolute inset-0 bg-primary/5"></div>
 </div>
-<div class="p-16">
+<div class="p-8 md:p-16 bonus-card-mobile">
 <div class="flex items-center gap-4 mb-8">
 <span class="material-symbols-outlined text-secondary text-3xl">flare</span>
 <span class="text-[10px] font-bold text-secondary uppercase letter-spacing-widest">BÔNUS EXCLUSIVO 01</span>
@@ -351,11 +469,11 @@
 </div>
 <!-- Bonus 2 -->
 <div class="bg-surface border border-secondary/10 flex flex-col overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
-<div class="h-80 bg-surface-container flex items-center justify-center relative overflow-hidden">
+<div class="h-52 md:h-80 bg-surface-container flex items-center justify-center relative overflow-hidden bonus-image-mobile">
 <img alt="Logo brand minimalist" class="w-1/3 opacity-10 grayscale brightness-0 group-hover:scale-105 transition-transform duration-[2s]" src="logo.png"/>
 <div class="absolute inset-0 bg-primary/5"></div>
 </div>
-<div class="p-16">
+<div class="p-8 md:p-16 bonus-card-mobile">
 <div class="flex items-center gap-4 mb-8">
 <span class="material-symbols-outlined text-secondary text-3xl">verified</span>
 <span class="text-[10px] font-bold text-secondary uppercase letter-spacing-widest">BÔNUS EXCLUSIVO 02</span>
@@ -375,14 +493,14 @@
     <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div class="text-center mb-24 max-w-3xl mx-auto">
             <span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-6">PROVA CLÍNICA</span>
-            <h2 class="text-4xl md:text-6xl text-primary mb-10 leading-tight">Resultados que Falam por Si</h2>
+            <h2 class="text-3xl md:text-6xl text-primary mb-8 md:mb-10 leading-tight mobile-heading">Resultados que Falam por Si</h2>
             <p class="headline-font text-xl text-on-surface-variant italic font-light">
                 Resultados naturais, preservando a identidade e expressividade de cada paciente.
             </p>
         </div>
 
         <!-- Gallery Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-12 gallery-grid-mobile">
             <!-- Result 1 - Pés de Galinha -->
             <div class="bg-surface border border-secondary/10 flex flex-col overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
                 <div class="aspect-[4/5] overflow-hidden relative">
@@ -439,19 +557,6 @@
                 </div>
             </div>
 
-            <!-- Result 5 - Pés de Galinha Lateral -->
-            <div class="bg-surface border border-secondary/10 flex flex-col overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
-                <div class="aspect-[4/5] overflow-hidden relative">
-                    <img alt="Antes e Depois - Lateral do Rosto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_5.jpg"/>
-                    <span class="absolute top-6 left-6 bg-primary text-on-primary text-[9px] font-bold px-4 py-2 letter-spacing-widest uppercase">ANTES & DEPOIS</span>
-                </div>
-                <div class="p-10 border-t border-secondary/5">
-                    <h3 class="text-2xl text-primary mb-3">Rugas Periorbitais</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">
-                        Tratamento da região lateral dos olhos com resultado natural, preservando a harmonia do rosto.
-                    </p>
-                </div>
-            </div>
 
             <!-- Result 6 - Rejuvenescimento Facial -->
             <div class="bg-surface border border-secondary/10 flex flex-col overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
@@ -517,10 +622,10 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-0 items-center">
 <div class="lg:col-span-5 z-10">
 <span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-8">FILOSOFIA DE CUIDADO</span>
-<h2 class="text-4xl md:text-6xl text-primary mb-12 leading-tight">Por que os pacientes amam o Clube?</h2>
-<div class="relative py-12 px-10 md:px-16 bg-white shadow-2xl border-l-[6px] border-secondary mb-12">
+<h2 class="text-3xl md:text-6xl text-primary mb-8 md:mb-12 leading-tight mobile-heading">Por que os pacientes amam o Clube?</h2>
+<div class="relative py-8 px-6 md:py-12 md:px-16 bg-white shadow-2xl border-l-[6px] border-secondary mb-8 md:mb-12 testimonial-quote">
 <span class="material-symbols-outlined text-secondary/30 text-7xl absolute top-4 left-4">format_quote</span>
-<p class="headline-font text-2xl md:text-3xl italic text-primary leading-relaxed relative z-10">
+<p class="headline-font text-lg md:text-3xl italic text-primary leading-relaxed relative z-10">
                     "Porque não se trata apenas de manter o Botox. Trata-se de manter a melhor versão de si mesma todos os dias."
                 </p>
 <div class="mt-8 flex items-center gap-4">
@@ -549,7 +654,7 @@
     <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div class="text-center mb-24 max-w-3xl mx-auto">
             <span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-6">OPÇÕES DE ASSINATURA</span>
-            <h2 class="text-4xl md:text-6xl text-primary mb-10 leading-tight">Oferta Especial de Lançamento!</h2>
+            <h2 class="text-3xl md:text-6xl text-primary mb-8 md:mb-10 leading-tight mobile-heading">Oferta Especial de Lançamento!</h2>
             <p class="headline-font text-xl text-on-surface-variant italic font-light">
                 Escolha o plano estratégico que melhor se adapta aos seus objetivos de beleza.
             </p>
@@ -558,7 +663,7 @@
         <!-- Plans Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <!-- Plan 1 -->
-            <div class="bg-surface border border-secondary/20 p-12 md:p-16 flex flex-col justify-between shadow-lg relative group">
+            <div class="bg-surface border border-secondary/20 p-8 md:p-16 flex flex-col justify-between shadow-lg relative group plan-card-mobile">
                 <div>
                     <!-- Header -->
                     <div class="flex items-center gap-4 mb-6">
@@ -622,7 +727,7 @@
             </div>
 
             <!-- Plan 2 -->
-            <div class="bg-surface border border-secondary/20 p-12 md:p-16 flex flex-col justify-between shadow-lg relative group">
+            <div class="bg-surface border border-secondary/20 p-8 md:p-16 flex flex-col justify-between shadow-lg relative group plan-card-mobile">
                 <!-- Most Popular/Exclusive badge -->
                 <div class="absolute -top-4 right-10 bg-secondary text-on-primary text-[9px] font-bold px-6 py-2 letter-spacing-widest uppercase">
                     RECOMENDADO
@@ -789,13 +894,13 @@
 <section class="py-section-gap relative" id="cta-final">
 <div class="absolute inset-0 bg-surface-container -z-10"></div>
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="max-w-5xl mx-auto text-center border border-secondary/10 py-24 md:py-32 px-12 md:px-24 bg-surface shadow-[0_50px_100px_-20px_rgba(0,0,0,0.08)] relative overflow-hidden">
+<div class="max-w-5xl mx-auto text-center border border-secondary/10 py-16 md:py-32 px-6 md:px-24 bg-surface shadow-[0_50px_100px_-20px_rgba(0,0,0,0.08)] relative overflow-hidden cta-mobile">
 <img alt="Logo" class="h-20 mx-auto mb-16 brightness-0 opacity-80" src="logo.png"/>
-<h2 class="text-4xl md:text-7xl text-primary mb-10 leading-tight max-w-3xl mx-auto">Sua beleza merece continuidade.</h2>
+<h2 class="text-3xl md:text-7xl text-primary mb-8 md:mb-10 leading-tight max-w-3xl mx-auto mobile-heading">Sua beleza merece continuidade.</h2>
 <p class="text-xl text-on-surface-variant mb-16 max-w-2xl mx-auto leading-relaxed">
                 Entre para o Clube do Botox Bayma e descubra como é viver um ano inteiro com mais prevenção, mais cuidado e mais confiança.
             </p>
-<button class="w-full sm:w-auto bg-primary text-on-primary text-[12px] font-bold px-16 py-8 letter-spacing-widest hover:bg-secondary transition-all shadow-2xl active:scale-95 uppercase">
+<button class="w-full sm:w-auto bg-primary text-on-primary text-[11px] md:text-[12px] font-bold px-10 md:px-16 py-6 md:py-8 letter-spacing-widest hover:bg-secondary transition-all shadow-2xl active:scale-95 uppercase">
                 QUERO GARANTIR MINHA VAGA
             </button>
 <div class="mt-12 flex items-center justify-center gap-4">
