@@ -162,10 +162,10 @@
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 12px !important;
             }
-            .gallery-grid-mobile .aspect-\[4\/5\] {
-                aspect-ratio: 3/4 !important;
+            .gallery-grid-mobile .aspect-\[4\/3\] {
+                aspect-ratio: 4/3 !important;
             }
-            .gallery-grid-mobile .p-10 {
+            .gallery-grid-mobile [class*="p-"] {
                 padding: 16px !important;
             }
             .gallery-grid-mobile h3 {
@@ -255,8 +255,8 @@
 
         /* Extra small screens (iPhone SE, etc) */
         @media (max-width: 380px) {
-            .gallery-grid-mobile .p-10 {
-                padding: 12px !important;
+            .gallery-grid-mobile [class*="p-"] {
+                padding: 10px !important;
             }
             .gallery-grid-mobile h3 {
                 font-size: 0.75rem !important;
@@ -583,57 +583,65 @@
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-12 gallery-grid-mobile">
             <!-- Result 1 - Pés de Galinha -->
             <div class="bg-surface border border-secondary/10 flex flex-col overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
-                <div class="aspect-[4/5] overflow-hidden relative">
-                    <img alt="Antes e Depois - Pés de Galinha" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_1.jpg"/>
-                    <span class="absolute top-6 left-6 bg-primary text-on-primary text-[9px] font-bold px-4 py-2 letter-spacing-widest uppercase">ANTES & DEPOIS</span>
+                <div class="aspect-[4/3] overflow-hidden relative">
+                    <img alt="Antes e Depois - Pés de Galinha" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_1.jpg"/>
+                    <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">ANTES & DEPOIS</span>
                 </div>
-                <div class="p-10 border-t border-secondary/5">
-                    <h3 class="text-2xl text-primary mb-3">Pés de Galinha</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">
-                        Suavização das linhas laterais dos olhos, preservando a naturalidade do sorriso e da expressão facial.
-                    </p>
+                <div class="p-5 md:p-6 lg:p-8 border-t border-secondary/5 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-3 leading-snug">Pés de Galinha</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Suavização das linhas laterais dos olhos, preservando a naturalidade do sorriso e da expressão facial.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <!-- Result 2 - Rugas Glabelares -->
             <div class="bg-surface border border-secondary/10 flex flex-col overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
-                <div class="aspect-[4/5] overflow-hidden relative">
-                    <img alt="Antes e Depois - Rugas Glabelares" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_2.jpg"/>
-                    <span class="absolute top-6 left-6 bg-primary text-on-primary text-[9px] font-bold px-4 py-2 letter-spacing-widest uppercase">ANTES & DEPOIS</span>
+                <div class="aspect-[4/3] overflow-hidden relative">
+                    <img alt="Antes e Depois - Rugas Glabelares" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_2.jpg"/>
+                    <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">ANTES & DEPOIS</span>
                 </div>
-                <div class="p-10 border-t border-secondary/5">
-                    <h3 class="text-2xl text-primary mb-3">Rugas Glabelares (Bravo)</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">
-                        Tratamento focado na região entre as sobrancelhas, eliminando o aspect de cansaço ou cara de brava.
-                    </p>
+                <div class="p-5 md:p-6 lg:p-8 border-t border-secondary/5 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-3 leading-snug">Rugas Glabelares (Bravo)</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Tratamento focado na região entre as sobrancelhas, eliminando o aspecto de cansaço ou cara de brava.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <!-- Result 4 - Linhas da Testa -->
             <div class="bg-surface border border-secondary/10 flex flex-col overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
-                <div class="aspect-[4/5] overflow-hidden relative">
-                    <img alt="Antes e Depois - Linhas da Testa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_4.jpg"/>
-                    <span class="absolute top-6 left-6 bg-primary text-on-primary text-[9px] font-bold px-4 py-2 letter-spacing-widest uppercase">CASO CLÍNICO</span>
+                <div class="aspect-[4/3] overflow-hidden relative">
+                    <img alt="Antes e Depois - Linhas da Testa" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_4.jpg"/>
+                    <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">CASO CLÍNICO</span>
                 </div>
-                <div class="p-10 border-t border-secondary/5">
-                    <h3 class="text-2xl text-primary mb-3">Linhas Horizontais da Testa</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">
-                        Resultado expressivo na suavização das rugas da testa, sem efeito congelado, mantendo expressão natural.
-                    </p>
+                <div class="p-5 md:p-6 lg:p-8 border-t border-secondary/5 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-3 leading-snug">Linhas Horizontais da Testa</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Resultado expressivo na suavização das rugas da testa, sem efeito congelado, mantendo expressão natural.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <!-- Result 6 - Rejuvenescimento Facial -->
             <div class="bg-surface border border-secondary/10 flex flex-col overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
-                <div class="aspect-[4/5] overflow-hidden relative">
-                    <img alt="Antes e Depois - Rejuvenescimento Facial" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_6.jpg"/>
-                    <span class="absolute top-6 left-6 bg-primary text-on-primary text-[9px] font-bold px-4 py-2 letter-spacing-widest uppercase">CASO CLÍNICO</span>
+                <div class="aspect-[4/3] overflow-hidden relative">
+                    <img alt="Antes e Depois - Rejuvenescimento Facial" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_6.jpg"/>
+                    <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">CASO CLÍNICO</span>
                 </div>
-                <div class="p-10 border-t border-secondary/5 flex flex-col justify-center">
-                    <h3 class="text-2xl text-primary mb-3 leading-snug">Rejuvenescimento Facial</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">
-                        Suavização das linhas de expressão da face e pescoço, com aparência rejuvenescida e natural.
-                    </p>
+                <div class="p-5 md:p-6 lg:p-8 border-t border-secondary/5 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-3 leading-snug">Rejuvenescimento Facial</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Suavização das linhas de expressão da face e pescoço, com aparência rejuvenescida e natural.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
