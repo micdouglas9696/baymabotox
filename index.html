@@ -283,6 +283,15 @@
             animation: zoomOutEntry 3.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
+        /* Prevent long words (like Rejuvenescimento) from clipping in gallery cards */
+        .gallery-grid-mobile h3 {
+            word-break: break-word !important;
+            overflow-wrap: break-word !important;
+            hyphens: auto !important;
+            -webkit-hyphens: auto !important;
+            -ms-hyphens: auto !important;
+        }
+
         @keyframes zoomOutEntry {
             from { transform: scale(1.15); }
             to { transform: scale(1.05); }
@@ -580,16 +589,16 @@
         </div>
 
         <!-- Gallery Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-12 gallery-grid-mobile">
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-8 gallery-grid-mobile">
             <!-- Result 1 - Pés de Galinha -->
             <div class="bg-surface border border-secondary/10 flex flex-col h-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
                 <div class="aspect-[4/3] overflow-hidden relative">
                     <img alt="Antes e Depois - Pés de Galinha" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_1.jpg"/>
                     <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">ANTES & DEPOIS</span>
                 </div>
-                <div class="p-5 md:p-6 lg:p-8 border-t border-secondary/5 flex flex-col justify-between flex-1">
+                <div class="p-4 sm:p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
                     <div>
-                        <h3 class="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-3 leading-snug min-h-[2.75rem] md:min-h-[3.25rem] lg:min-h-[4rem] flex items-center">Pés de Galinha</h3>
+                        <h3 class="text-base sm:text-lg lg:text-xl font-medium text-primary mb-3 leading-snug min-h-[2.5rem] sm:min-h-[2.75rem] lg:min-h-[3.25rem] flex items-center">Pés de Galinha</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
                             Suavização das linhas laterais dos olhos, preservando a naturalidade do sorriso e da expressão facial.
                         </p>
@@ -603,9 +612,9 @@
                     <img alt="Antes e Depois - Rugas Glabelares" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_2.jpg"/>
                     <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">ANTES & DEPOIS</span>
                 </div>
-                <div class="p-5 md:p-6 lg:p-8 border-t border-secondary/5 flex flex-col justify-between flex-1">
+                <div class="p-4 sm:p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
                     <div>
-                        <h3 class="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-3 leading-snug min-h-[2.75rem] md:min-h-[3.25rem] lg:min-h-[4rem] flex items-center">Rugas Glabelares (Bravo)</h3>
+                        <h3 class="text-base sm:text-lg lg:text-xl font-medium text-primary mb-3 leading-snug min-h-[2.5rem] sm:min-h-[2.75rem] lg:min-h-[3.25rem] flex items-center">Rugas Glabelares (Bravo)</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
                             Tratamento focado na região entre as sobrancelhas, eliminando o aspecto de cansaço ou cara de brava.
                         </p>
@@ -619,9 +628,9 @@
                     <img alt="Antes e Depois - Linhas da Testa" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_4.jpg"/>
                     <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">CASO CLÍNICO</span>
                 </div>
-                <div class="p-5 md:p-6 lg:p-8 border-t border-secondary/5 flex flex-col justify-between flex-1">
+                <div class="p-4 sm:p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
                     <div>
-                        <h3 class="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-3 leading-snug min-h-[2.75rem] md:min-h-[3.25rem] lg:min-h-[4rem] flex items-center">Linhas Horizontais da Testa</h3>
+                        <h3 class="text-base sm:text-lg lg:text-xl font-medium text-primary mb-3 leading-snug min-h-[2.5rem] sm:min-h-[2.75rem] lg:min-h-[3.25rem] flex items-center">Linhas Horizontais da Testa</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
                             Resultado expressivo na suavização das rugas da testa, sem efeito congelado, mantendo expressão natural.
                         </p>
@@ -635,9 +644,9 @@
                     <img alt="Antes e Depois - Rejuvenescimento Facial" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_6.jpg"/>
                     <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">CASO CLÍNICO</span>
                 </div>
-                <div class="p-5 md:p-6 lg:p-8 border-t border-secondary/5 flex flex-col justify-between flex-1">
+                <div class="p-4 sm:p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
                     <div>
-                        <h3 class="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-3 leading-snug min-h-[2.75rem] md:min-h-[3.25rem] lg:min-h-[4rem] flex items-center">Rejuvenescimento Facial</h3>
+                        <h3 class="text-base sm:text-lg lg:text-xl font-medium text-primary mb-3 leading-snug min-h-[2.5rem] sm:min-h-[2.75rem] lg:min-h-[3.25rem] flex items-center">Rejuvenescimento Facial</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
                             Suavização das linhas de expressão da face e pescoço, com aparência rejuvenescida e natural.
                         </p>
