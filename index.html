@@ -496,137 +496,143 @@
 </section>
 <!-- Statement Banner -->
 <section class="bg-primary py-20 md:py-48 relative overflow-hidden">
-<div class="absolute inset-0 flex justify-center items-center opacity-[0.03] pointer-events-none">
-<img alt="" class="h-full w-auto object-contain brightness-0 invert" src="logo.png"/>
-</div>
-<div class="px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto text-center relative z-10">
-<h2 class="text-2xl md:text-5xl text-on-primary italic leading-[1.4] font-light">
+    <div class="absolute inset-0 flex justify-center items-center opacity-[0.03] pointer-events-none">
+        <img alt="" class="h-full w-auto object-contain brightness-0 invert" src="logo.png"/>
+    </div>
+    <div class="px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-2xl md:text-5xl text-on-primary italic leading-[1.4] font-light">
             "Enquanto o Botox cuida da expressão, os benefícios exclusivos do Clube cuidam da qualidade da sua pele."
         </h2>
-</div>
+    </div>
 </section>
 
 <!-- Como Funciona Section -->
 <section class="py-section-gap bg-surface px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden" id="como-funciona">
-    <div class="text-center mb-24 max-w-3xl mx-auto">
+    <div class="text-center mb-16 max-w-3xl mx-auto">
         <span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-6">COMO FUNCIONA</span>
-        <h2 class="text-4xl md:text-6xl text-primary mb-10 leading-tight">Como Funciona o Clube</h2>
-        <p class="headline-font text-xl text-on-surface-variant italic font-light">
-            <span class="hidden md:inline">O Clube do Botox oferece planos anuais com sessões regulares de aplicação de toxina botulínica, garantindo um cuidado contínuo com a sua aparência. Ao se tornar membro, você recebe um atendimento personalizado, com tratamentos que atendem às suas necessidades específicas.</span>
-            <span class="md:hidden">Planos anuais com sessões regulares e atendimento personalizado para cuidar da sua aparência o ano todo.</span>
-        </p>
+        <h2 class="text-4xl md:text-6xl text-primary leading-tight">Como Funciona o Clube</h2>
     </div>
 
-    <!-- Center Monogram & Benefits Layout -->
-    <div class="relative max-w-5xl mx-auto mt-20">
-        <!-- Background decorative circles -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-secondary/5 pointer-events-none hidden md:block"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full border border-secondary/10 pointer-events-none hidden md:block"></div>
+    <!-- 4 Benefits Clean Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16 px-4">
+        <!-- Benefit 1 -->
+        <div class="bg-surface-container-low border border-secondary/15 p-6 md:p-8 flex flex-col gap-4 shadow-sm hover:shadow-md hover:border-secondary/35 hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary text-3xl">star_rate</span>
+                <h3 class="text-xl font-bold text-primary font-body">Vantagens Exclusivas</h3>
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+                Descontos especiais e condições exclusivas em outros procedimentos estéticos da clínica ao longo do ano.
+            </p>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <!-- Left Side Benefits -->
-            <div class="md:col-span-4 flex flex-col gap-16 md:text-right">
-                <!-- Benefit 1 -->
-                <div class="relative group">
-                    <div class="flex items-center md:justify-end gap-4 mb-4">
-                        <span class="material-symbols-outlined text-secondary text-2xl md:hidden">check_circle</span>
-                        <h3 class="text-2xl text-primary font-medium">Vantagens Exclusivas</h3>
-                        <span class="material-symbols-outlined text-secondary text-2xl hidden md:block">check_circle</span>
-                    </div>
-                    <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
-                        <span class="hidden md:inline">Descontos especiais e condições exclusivas em outros procedimentos estéticos da clínica ao longo do ano.</span>
-                        <span class="md:hidden">Descontos e condições exclusivas em procedimentos da clínica.</span>
-                    </p>
+        <!-- Benefit 2 -->
+        <div class="bg-surface-container-low border border-secondary/15 p-6 md:p-8 flex flex-col gap-4 shadow-sm hover:shadow-md hover:border-secondary/35 hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary text-3xl">verified</span>
+                <h3 class="text-xl font-bold text-primary font-body">Resultados Consistentes</h3>
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+                Manutenção preventiva e contínua dos efeitos do Botox, evitando o retorno total das rugas de expressão.
+            </p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="bg-surface-container-low border border-secondary/15 p-6 md:p-8 flex flex-col gap-4 shadow-sm hover:shadow-md hover:border-secondary/35 hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary text-3xl">payments</span>
+                <h3 class="text-xl font-bold text-primary font-body">Economia</h3>
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+                Descontos e condições de pagamento facilitadas, com parcelamento anual muito mais atrativo que sessões individuais.
+            </p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="bg-surface-container-low border border-secondary/15 p-6 md:p-8 flex flex-col gap-4 shadow-sm hover:shadow-md hover:border-secondary/35 hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary text-3xl">calendar_today</span>
+                <h3 class="text-xl font-bold text-primary font-body">Conveniência</h3>
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+                Agendamentos prioritários para suas sessões de retorno, garantindo flexibilidade e encaixes na sua agenda.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section (Timeline Journey) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="beneficios">
+    <div class="text-center mb-16 max-w-3xl mx-auto">
+        <span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-6">A JORNADA ANUAL</span>
+        <h2 class="text-3xl md:text-5xl text-primary leading-tight mobile-heading">Sua Jornada de Beleza Passo a Passo</h2>
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="relative max-w-5xl mx-auto mt-16 px-4">
+        <!-- Connecting Line for Desktop (horizontal) -->
+        <div class="absolute top-[48px] left-[10%] right-[10%] h-[2px] bg-secondary/20 hidden lg:block z-0"></div>
+
+        <div class="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8 relative z-10">
+            <!-- Step 1 -->
+            <div class="flex flex-row lg:flex-col items-start lg:items-center gap-6 lg:gap-6 lg:text-center flex-1 relative">
+                <!-- Vertical Line for Mobile -->
+                <div class="absolute left-[31px] top-[70px] bottom-[-48px] w-[2px] bg-secondary/20 lg:hidden z-[-1] h-[calc(100%+48px)]"></div>
+                <div class="w-16 h-16 rounded-full bg-primary border-2 border-secondary flex items-center justify-center text-secondary font-bold text-lg flex-shrink-0 shadow-lg">
+                    01
                 </div>
-
-                <!-- Benefit 2 -->
-                <div class="relative group">
-                    <div class="flex items-center md:justify-end gap-4 mb-4">
-                        <span class="material-symbols-outlined text-secondary text-2xl md:hidden">check_circle</span>
-                        <h3 class="text-2xl text-primary font-medium">Resultados Consistentes</h3>
-                        <span class="material-symbols-outlined text-secondary text-2xl hidden md:block">check_circle</span>
-                    </div>
-                    <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
-                        <span class="hidden md:inline">Manutenção preventiva e contínua dos efeitos do Botox, evitando o retorno total das rugas de expressão.</span>
-                        <span class="md:hidden">Manutenção contínua, sem retorno total das rugas.</span>
+                <div class="pt-2 lg:pt-0">
+                    <h3 class="text-xl font-bold text-primary mb-2 font-body">Planejamento Estratégico</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed max-w-xs lg:mx-auto">
+                        Sua jornada começa com a avaliação minuciosa da Dra. Renata Bayma.
                     </p>
                 </div>
             </div>
 
-            <!-- Center Monogram -->
-            <div class="md:col-span-4 flex justify-center py-8 md:py-0">
-                <div class="monogram-circle relative w-52 h-52 md:w-80 md:h-80 rounded-full bg-surface-container-low border border-secondary/20 flex items-center justify-center p-8 shadow-2xl transition-all duration-1000 hover:scale-105">
-                    <div class="absolute inset-4 rounded-full border border-secondary/10 animate-[spin_60s_linear_infinite]"></div>
-                    <img alt="Monograma Dra. Renata Bayma" class="w-1/2 h-auto object-contain brightness-0 filter-gold opacity-90 transition-transform duration-[2s] hover:rotate-12" src="logo.png"/>
+            <!-- Step 2 -->
+            <div class="flex flex-row lg:flex-col items-start lg:items-center gap-6 lg:gap-6 lg:text-center flex-1 relative">
+                <!-- Vertical Line for Mobile -->
+                <div class="absolute left-[31px] top-[70px] bottom-[-48px] w-[2px] bg-secondary/20 lg:hidden z-[-1] h-[calc(100%+48px)]"></div>
+                <div class="w-16 h-16 rounded-full bg-primary border-2 border-secondary flex items-center justify-center text-secondary font-bold text-lg flex-shrink-0 shadow-lg">
+                    02
+                </div>
+                <div class="pt-2 lg:pt-0">
+                    <h3 class="text-xl font-bold text-primary mb-2 font-body">Aplicação 01 + Home Care</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed max-w-xs lg:mx-auto">
+                        Início do tratamento e entrega do seu protocolo exclusivo assinado.
+                    </p>
                 </div>
             </div>
 
-            <!-- Right Side Benefits -->
-            <div class="md:col-span-4 flex flex-col gap-16">
-                <!-- Benefit 3 -->
-                <div class="relative group">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="material-symbols-outlined text-secondary text-2xl">check_circle</span>
-                        <h3 class="text-2xl text-primary font-medium">Economia</h3>
-                    </div>
-                    <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
-                        <span class="hidden md:inline">Descontos e condições de pagamento facilitadas, com parcelamento anual muito mais atrativo que sessões individuais.</span>
-                        <span class="md:hidden">Parcelamento atrativo — muito melhor que sessões avulsas.</span>
+            <!-- Step 3 -->
+            <div class="flex flex-row lg:flex-col items-start lg:items-center gap-6 lg:gap-6 lg:text-center flex-1 relative">
+                <!-- Vertical Line for Mobile -->
+                <div class="absolute left-[31px] top-[70px] bottom-[-48px] w-[2px] bg-secondary/20 lg:hidden z-[-1] h-[calc(100%+48px)]"></div>
+                <div class="w-16 h-16 rounded-full bg-primary border-2 border-secondary flex items-center justify-center text-secondary font-bold text-lg flex-shrink-0 shadow-lg">
+                    03
+                </div>
+                <div class="pt-2 lg:pt-0">
+                    <h3 class="text-xl font-bold text-primary mb-2 font-body">Estética Regenerativa</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed max-w-xs lg:mx-auto">
+                        Sessão intermediária focada em dar viço, estímulo e luminosidade à pele.
                     </p>
                 </div>
+            </div>
 
-                <!-- Benefit 4 -->
-                <div class="relative group">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="material-symbols-outlined text-secondary text-2xl">check_circle</span>
-                        <h3 class="text-2xl text-primary font-medium">Conveniência</h3>
-                    </div>
-                    <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
-                        <span class="hidden md:inline">Agendamentos prioritários para suas sessões de retorno, garantindo flexibilidade e encaixes na sua agenda.</span>
-                        <span class="md:hidden">Agendamentos prioritários com flexibilidade na agenda.</span>
+            <!-- Step 4 -->
+            <div class="flex flex-row lg:flex-col items-start lg:items-center gap-6 lg:gap-6 lg:text-center flex-1 relative">
+                <div class="w-16 h-16 rounded-full bg-primary border-2 border-secondary flex items-center justify-center text-secondary font-bold text-lg flex-shrink-0 shadow-lg">
+                    04
+                </div>
+                <div class="pt-2 lg:pt-0">
+                    <h3 class="text-xl font-bold text-primary mb-2 font-body">Aplicação 02 / Manutenção</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed max-w-xs lg:mx-auto">
+                        Garantia de expressão leve o ano todo, sem o retorno das rugas.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-</section>
-
-<!-- Features Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="beneficios">
-<div class="text-center mb-24 max-w-3xl mx-auto">
-<span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-6">A EXPERIÊNCIA</span>
-<h2 class="text-2xl md:text-6xl text-primary leading-tight mobile-heading">O que você ganha ao fazer parte do Clube?</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16 md:gap-y-24 features-grid-mobile">
-<div class="flex gap-10 group">
-<span class="headline-font text-3xl text-secondary/40 italic flex-shrink-0">01</span>
-<div>
-<h3 class="text-2xl text-primary mb-5">Expressão mais leve durante todo o ano</h3>
-<p class="text-on-surface-variant leading-relaxed">Sem altos e baixos entre uma aplicação e outra, mantendo a constância da sua melhor versão.</p>
-</div>
-</div>
-<div class="flex gap-10 group">
-<span class="headline-font text-3xl text-secondary/40 italic flex-shrink-0">02</span>
-<div>
-<h3 class="text-2xl text-primary mb-5">Planejamento anual personalizado</h3>
-<p class="text-on-surface-variant leading-relaxed">Seu tratamento é organizado para que cada manutenção aconteça no momento ideal, sem esperas.</p>
-</div>
-</div>
-<div class="flex gap-10 group">
-<span class="headline-font text-3xl text-secondary/40 italic flex-shrink-0">03</span>
-<div>
-<h3 class="text-2xl text-primary mb-5">Acompanhamento da Dra. Renata Bayma</h3>
-<p class="text-on-surface-variant leading-relaxed">Sua evolução é acompanhada minuciosamente, permitindo resultados cada vez mais naturais e harmônicos.</p>
-</div>
-</div>
-<div class="flex gap-10 group">
-<span class="headline-font text-3xl text-secondary/40 italic flex-shrink-0">04</span>
-<div>
-<h3 class="text-2xl text-primary mb-5">Mais segurança e previsibilidade</h3>
-<p class="text-on-surface-variant leading-relaxed">Você sabe exatamente como será seu plano de cuidados, com a tranquilidade de quem está em boas mãos.</p>
-</div>
-</div>
-</div>
 </section>
 <!-- Exclusive Benefits Section -->
 <section class="py-section-gap bg-surface-container-low overflow-hidden" id="clube">
@@ -809,60 +815,49 @@
         <!-- Plans Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <!-- Plan 1 -->
-            <div class="bg-surface border border-secondary/20 p-8 md:p-16 flex flex-col justify-between shadow-lg relative group plan-card-mobile">
+            <div class="bg-surface border border-secondary/20 p-8 md:p-12 flex flex-col justify-between shadow-lg relative group plan-card-mobile hover:shadow-xl transition-all duration-300">
                 <div>
                     <!-- Header -->
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-4 mb-4">
                         <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
                         <h3 class="headline-font text-3xl text-primary font-medium">Terço Superior Completo</h3>
                     </div>
-                    <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-4">2 Aplicações Anuais</span>
-                    <p class="text-on-surface-variant text-sm md:text-base mb-10 leading-relaxed min-h-[50px]">
-                        Ideal para suavizar as linhas e rugas da testa, glabela e ao redor dos olhos.
-                    </p>
+                    <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-1">2 Aplicações Anuais</span>
+                    <span class="text-xs text-on-surface-variant/80 italic block mb-6">Ideal para durabilidade padrão (4 a 6 meses)</span>
 
-                    <div class="h-px bg-secondary/15 mb-10"></div>
+                    <div class="h-px bg-secondary/15 mb-6"></div>
 
                     <!-- Benefits List -->
-                    <div class="flex flex-col gap-8 mb-12">
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Aplicações</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">2 sessões estrategicamente planejadas ao longo do ano.</p>
-                            </div>
+                    <div class="flex flex-col gap-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">2 sessões planejadas ao longo do ano</span>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Bônus Especial</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">1 sessão de Estética Regenerativa + Home Care Assinado.</p>
-                            </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">1 sessão de Estética Regenerativa (Bônus)</span>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Resultados Naturais</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">Aparência rejuvenescida, descansada e extremamente natural.</p>
-                            </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">Home Care Exclusivo Assinado (Bônus)</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Price and CTA -->
                 <div class="mt-auto">
-                    <div class="h-px bg-secondary/15 mb-10"></div>
-                    <div class="mb-8">
+                    <div class="h-px bg-secondary/15 mb-6"></div>
+                    <div class="mb-6">
                         <span class="text-xs text-on-surface-variant/60 uppercase block mb-1">Preço Original</span>
-                        <span class="text-lg text-on-surface-variant/70 line-through block mb-4">R$ 2.800</span>
+                        <span class="text-lg text-on-surface-variant/70 line-through block mb-2">R$ 2.800</span>
                         <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-1">Preço Clube do Botox</span>
                         <div class="flex items-baseline gap-2">
                             <span class="text-xs font-bold text-primary">12x de</span>
-                            <span class="headline-font text-5xl md:text-6xl text-primary font-bold">R$ 182,50</span>
+                            <span class="headline-font text-5xl text-primary font-bold">R$ 182,50</span>
                         </div>
                     </div>
                     
-                    <a class="block w-full bg-primary text-on-primary text-[11px] font-bold py-6 letter-spacing-widest text-center hover:bg-secondary transition-all uppercase mb-6" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20minha%20consulta%20para%20o%20Clube%20do%20Botox.%20Tenho%20interesse%20no%20plano%3A%20Ter%C3%A7o%20Superior%20Completo%20%282%20Aplica%C3%A7%C3%B5es%20Anuais%29%20-%20Valor%3A%2012x%20de%20R%24%20182%2C50." target="_blank" rel="noopener noreferrer">
+                    <a class="block w-full bg-primary text-on-primary text-[11px] font-bold py-5 letter-spacing-widest text-center hover:bg-secondary transition-all uppercase mb-4" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20minha%20consulta%20para%20o%20Clube%20do%20Botox.%20Tenho%20interesse%20no%20plano%3A%20Ter%C3%A7o%20Superior%20Completo%20%282%20Aplica%C3%A7%C3%B5es%20Anuais%29%20-%20Valor%3A%2012x%20de%20R%24%20182%2C50." target="_blank" rel="noopener noreferrer">
                         AGENDE SUA CONSULTA
                     </a>
                     
@@ -874,60 +869,49 @@
             </div>
 
             <!-- Plan 2 -->
-            <div class="bg-surface border border-secondary/20 p-8 md:p-16 flex flex-col justify-between shadow-lg relative group plan-card-mobile">
+            <div class="bg-surface border border-secondary/20 p-8 md:p-12 flex flex-col justify-between shadow-lg relative group plan-card-mobile hover:shadow-xl transition-all duration-300">
                 <div>
                     <!-- Header -->
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-4 mb-4">
                         <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
                         <h3 class="headline-font text-3xl text-primary font-medium">Terço Superior Completo</h3>
                     </div>
-                    <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-4">3 Aplicações Anuais</span>
-                    <p class="text-on-surface-variant text-sm md:text-base mb-10 leading-relaxed min-h-[50px]">
-                        Cuidado contínuo para manter a testa, glabela e ao redor dos olhos sempre rejuvenescidos.
-                    </p>
+                    <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-1">3 Aplicações Anuais</span>
+                    <span class="text-xs text-on-surface-variant/80 italic block mb-6">Recomendado para alta força muscular, homens ou atletas (durabilidade de 3 a 4 meses)</span>
 
-                    <div class="h-px bg-secondary/15 mb-10"></div>
+                    <div class="h-px bg-secondary/15 mb-6"></div>
 
                     <!-- Benefits List -->
-                    <div class="flex flex-col gap-8 mb-12">
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Aplicações</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">3 sessões estrategicamente planejadas ao longo do ano.</p>
-                            </div>
+                    <div class="flex flex-col gap-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">3 sessões planejadas ao longo do ano</span>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Bônus Especial</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">2 sessões de Estética Regenerativa + Home Care Assinado.</p>
-                            </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">2 sessões de Estética Regenerativa (Bônus)</span>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Resultados Naturais</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">Aparência rejuvenescida, descansada e extremamente natural.</p>
-                            </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">Home Care Exclusivo Assinado (Bônus)</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Price and CTA -->
                 <div class="mt-auto">
-                    <div class="h-px bg-secondary/15 mb-10"></div>
-                    <div class="mb-8">
+                    <div class="h-px bg-secondary/15 mb-6"></div>
+                    <div class="mb-6">
                         <span class="text-xs text-on-surface-variant/60 uppercase block mb-1">Preço Original</span>
-                        <span class="text-lg text-on-surface-variant/70 line-through block mb-4">R$ 4.200</span>
+                        <span class="text-lg text-on-surface-variant/70 line-through block mb-2">R$ 4.200</span>
                         <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-1">Preço Clube do Botox</span>
                         <div class="flex items-baseline gap-2">
                             <span class="text-xs font-bold text-primary">12x de</span>
-                            <span class="headline-font text-5xl md:text-6xl text-primary font-bold">R$ 275,00</span>
+                            <span class="headline-font text-5xl text-primary font-bold">R$ 275,00</span>
                         </div>
                     </div>
                     
-                    <a class="block w-full bg-primary text-on-primary text-[11px] font-bold py-6 letter-spacing-widest text-center hover:bg-secondary transition-all uppercase mb-6" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20minha%20consulta%20para%20o%20Clube%20do%20Botox.%20Tenho%20interesse%20no%20plano%3A%20Ter%C3%A7o%20Superior%20Completo%20%283%20Aplica%C3%A7%C3%B5es%20Anuais%29%20-%20Valor%3A%2012x%20de%20R%24%20275%2C00." target="_blank" rel="noopener noreferrer">
+                    <a class="block w-full bg-primary text-on-primary text-[11px] font-bold py-5 letter-spacing-widest text-center hover:bg-secondary transition-all uppercase mb-4" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20minha%20consulta%20para%20o%20Clube%20do%20Botox.%20Tenho%20interesse%20no%20plano%3A%20Ter%C3%A7o%20Superior%20Completo%20%283%20Aplica%C3%A7%C3%B5es%20Anuais%29%20-%20Valor%3A%2012x%20de%20R%24%20275%2C00." target="_blank" rel="noopener noreferrer">
                         AGENDE SUA CONSULTA
                     </a>
                     
@@ -939,60 +923,49 @@
             </div>
 
             <!-- Plan 3 -->
-            <div class="bg-surface border border-secondary/20 p-8 md:p-16 flex flex-col justify-between shadow-lg relative group plan-card-mobile">
+            <div class="bg-surface border border-secondary/20 p-8 md:p-12 flex flex-col justify-between shadow-lg relative group plan-card-mobile hover:shadow-xl transition-all duration-300">
                 <div>
                     <!-- Header -->
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-4 mb-4">
                         <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
                         <h3 class="headline-font text-3xl text-primary font-medium">Full Face + Platisma</h3>
                     </div>
-                    <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-4">2 Sessões de Botox</span>
-                    <p class="text-on-surface-variant text-sm md:text-base mb-10 leading-relaxed min-h-[50px]">
-                        Perfeito para um rejuvenescimento completo do rosto, tratando pescoço e contorno facial (platisma).
-                    </p>
+                    <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-1">2 Sessões de Botox</span>
+                    <span class="text-xs text-on-surface-variant/80 italic block mb-6">Ideal para durabilidade padrão (4 a 6 meses)</span>
 
-                    <div class="h-px bg-secondary/15 mb-10"></div>
+                    <div class="h-px bg-secondary/15 mb-6"></div>
 
                     <!-- Benefits List -->
-                    <div class="flex flex-col gap-8 mb-12">
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Aplicações</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">2 sessões de toxina botulínica fullface e pescoço ao ano.</p>
-                            </div>
+                    <div class="flex flex-col gap-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">2 sessões de Botox full face e pescoço</span>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Bônus Especial</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">1 sessão de Estética Regenerativa + Home Care Assinado.</p>
-                            </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">1 sessão de Estética Regenerativa (Bônus)</span>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Tratamento Global</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">Pele visivelmente mais firme, rugas suavizadas e contorno definido.</p>
-                            </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">Home Care Exclusivo Assinado (Bônus)</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Price and CTA -->
                 <div class="mt-auto">
-                    <div class="h-px bg-secondary/15 mb-10"></div>
-                    <div class="mb-8">
+                    <div class="h-px bg-secondary/15 mb-6"></div>
+                    <div class="mb-6">
                         <span class="text-xs text-on-surface-variant/60 uppercase block mb-1">Preço Original</span>
-                        <span class="text-lg text-on-surface-variant/70 line-through block mb-4">R$ 4.450</span>
+                        <span class="text-lg text-on-surface-variant/70 line-through block mb-2">R$ 4.450</span>
                         <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-1">Preço Clube do Botox</span>
                         <div class="flex items-baseline gap-2">
                             <span class="text-xs font-bold text-primary">12x de</span>
-                            <span class="headline-font text-5xl md:text-6xl text-primary font-bold">R$ 329,00</span>
+                            <span class="headline-font text-5xl text-primary font-bold">R$ 329,00</span>
                         </div>
                     </div>
                     
-                    <a class="block w-full bg-primary text-on-primary text-[11px] font-bold py-6 letter-spacing-widest text-center hover:bg-secondary transition-all uppercase mb-6" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20minha%20consulta%20para%20o%20Clube%20do%20Botox.%20Tenho%20interesse%20no%20plano%3A%20Full%20Face%20%2B%20Platisma%20%282%20Sess%C3%B5es%20de%20Botox%29%20-%20Valor%3A%2012x%20de%20R%24%20329%2C00." target="_blank" rel="noopener noreferrer">
+                    <a class="block w-full bg-primary text-on-primary text-[11px] font-bold py-5 letter-spacing-widest text-center hover:bg-secondary transition-all uppercase mb-4" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20minha%20consulta%20para%20o%20Clube%20do%20Botox.%20Tenho%20interesse%20no%20plano%3A%20Full%20Face%20%2B%20Platisma%20%282%20Sess%C3%B5es%20de%20Botox%29%20-%20Valor%3A%2012x%20de%20R%24%20329%2C00." target="_blank" rel="noopener noreferrer">
                         AGENDE SUA CONSULTA
                     </a>
                     
@@ -1004,7 +977,7 @@
             </div>
 
             <!-- Plan 4 -->
-            <div class="bg-surface border border-secondary/20 p-8 md:p-16 flex flex-col justify-between shadow-lg relative group plan-card-mobile">
+            <div class="bg-surface border border-secondary/20 p-8 md:p-12 flex flex-col justify-between shadow-lg relative group plan-card-mobile hover:shadow-xl transition-all duration-300">
                 <!-- Recommended badge -->
                 <div class="absolute -top-4 right-10 bg-secondary text-on-primary text-[9px] font-bold px-6 py-2 letter-spacing-widest uppercase">
                     RECOMENDADO
@@ -1012,57 +985,46 @@
 
                 <div>
                     <!-- Header -->
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-4 mb-4">
                         <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
                         <h3 class="headline-font text-3xl text-primary font-medium">Full Face + Platisma</h3>
                     </div>
-                    <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-4">3 Sessões de Botox</span>
-                    <p class="text-on-surface-variant text-sm md:text-base mb-10 leading-relaxed min-h-[50px]">
-                        Cuidado anual intensivo para rejuvenescimento facial completo, pescoço e contorno (platisma).
-                    </p>
+                    <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-1">3 Sessões de Botox</span>
+                    <span class="text-xs text-on-surface-variant/80 italic block mb-6">Recomendado para alta força muscular, homens ou atletas (durabilidade de 3 a 4 meses)</span>
 
-                    <div class="h-px bg-secondary/15 mb-10"></div>
+                    <div class="h-px bg-secondary/15 mb-6"></div>
 
                     <!-- Benefits List -->
-                    <div class="flex flex-col gap-8 mb-12">
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Aplicações</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">3 sessões de toxina botulínica fullface e pescoço ao ano.</p>
-                            </div>
+                    <div class="flex flex-col gap-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">3 sessões de Botox full face e pescoço</span>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Bônus Especial</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">2 sessões de Estética Regenerativa + Home Care Assinado.</p>
-                            </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">2 sessões de Estética Regenerativa (Bônus)</span>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">check</span>
-                            <div>
-                                <h4 class="text-primary font-semibold text-sm uppercase letter-spacing-widest mb-1">Tratamento Global</h4>
-                                <p class="text-on-surface-variant/80 text-xs md:text-sm">Pele visivelmente mais firme, rugas suavizadas e contorno definido.</p>
-                            </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check</span>
+                            <span class="text-on-surface-variant text-sm">Home Care Exclusivo Assinado (Bônus)</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Price and CTA -->
                 <div class="mt-auto">
-                    <div class="h-px bg-secondary/15 mb-10"></div>
-                    <div class="mb-8">
+                    <div class="h-px bg-secondary/15 mb-6"></div>
+                    <div class="mb-6">
                         <span class="text-xs text-on-surface-variant/60 uppercase block mb-1">Preço Original</span>
-                        <span class="text-lg text-on-surface-variant/70 line-through block mb-4">R$ 6.870</span>
+                        <span class="text-lg text-on-surface-variant/70 line-through block mb-2">R$ 6.870</span>
                         <span class="text-xs text-secondary font-bold uppercase letter-spacing-widest block mb-1">Preço Clube do Botox</span>
                         <div class="flex items-baseline gap-2">
                             <span class="text-xs font-bold text-primary">12x de</span>
-                            <span class="headline-font text-5xl md:text-6xl text-primary font-bold">R$ 497,00</span>
+                            <span class="headline-font text-5xl text-primary font-bold">R$ 497,00</span>
                         </div>
                     </div>
                     
-                    <a class="block w-full bg-primary text-on-primary text-[11px] font-bold py-6 letter-spacing-widest text-center hover:bg-secondary transition-all uppercase mb-6" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20minha%20consulta%20para%20o%20Clube%20do%20Botox.%20Tenho%20interesse%20no%20plano%3A%20Full%20Face%20%2B%20Platisma%20%283%20Sess%C3%B5es%20de%20Botox%29%20-%20Valor%3A%2012x%20de%20R%24%20497%2C00." target="_blank" rel="noopener noreferrer">
+                    <a class="block w-full bg-primary text-on-primary text-[11px] font-bold py-5 letter-spacing-widest text-center hover:bg-secondary transition-all uppercase mb-4" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20minha%20consulta%20para%20o%20Clube%20do%20Botox.%20Tenho%20interesse%20no%20plano%3A%20Full%20Face%20%2B%20Platisma%20%283%20Sess%C3%B5es%20de%20Botox%29%20-%20Valor%3A%2012x%20de%20R%24%20497%2C00." target="_blank" rel="noopener noreferrer">
                         AGENDE SUA CONSULTA
                     </a>
                     
@@ -1184,7 +1146,7 @@
 <!-- Urgency Badge - Pulsating -->
 <div class="urgency-badge inline-flex items-center gap-3 px-8 py-4 rounded-full mb-10">
     <span class="urgency-dot w-3 h-3 rounded-full flex-shrink-0"></span>
-    <span class="urgency-text text-[11px] md:text-[12px] font-black text-white uppercase letter-spacing-widest">⚡ ÚLTIMAS VAGAS DISPONÍVEIS</span>
+    <span class="urgency-text text-[11px] md:text-[12px] font-black text-white uppercase letter-spacing-widest">⚡ ÚLTIMAS VAGAS DISPONÍVEIS — <span id="urgency-year">2026</span></span>
 </div>
 
 <a class="inline-block w-full sm:w-auto bg-primary text-on-primary text-[11px] md:text-[12px] font-bold px-10 md:px-16 py-6 md:py-8 letter-spacing-widest hover:bg-secondary transition-all shadow-2xl active:scale-95 uppercase text-center" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Quero%20garantir%20minha%20vaga%20no%20Clube%20do%20Botox%20e%20agendar%20minha%20consulta." target="_blank" rel="noopener noreferrer">
@@ -1204,7 +1166,7 @@
 <div class="flex flex-col items-start">
 <img alt="Dra. Renata Bayma" class="h-16 mb-10 brightness-0" src="logo.png"/>
 <p class="text-[11px] font-medium text-on-surface-variant/70 max-w-xs leading-loose letter-spacing-widest uppercase">
-                    © 2024 Dra. Renata Bayma — Estética de Luxo e Harmonização Facial.
+                    © <span id="current-year">2026</span> Dra. Renata Bayma — Estética de Luxo e Harmonização Facial.
                 </p>
 </div>
 <div class="flex flex-wrap gap-x-16 gap-y-8">
@@ -1379,5 +1341,14 @@
         // Initial state
         setTimeout(updateDots, 300);
     })();
+
+    // Dynamic current year logic
+    try {
+        const currentYear = new Date().getFullYear();
+        document.getElementById('current-year').textContent = currentYear;
+        document.getElementById('urgency-year').textContent = currentYear;
+    } catch (e) {
+        console.error("Dynamic year script error:", e);
+    }
 </script>
 </body></html>
