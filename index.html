@@ -266,6 +266,101 @@
             }
         }
 
+        /* ===== PULSATING URGENCY BADGE ===== */
+        @keyframes urgencyPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(181, 153, 120, 0.5);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 0 20px 8px rgba(181, 153, 120, 0.25);
+            }
+        }
+
+        @keyframes urgencyGlow {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes dotBlink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.6); }
+        }
+
+        .urgency-badge {
+            animation: urgencyPulse 2s ease-in-out infinite;
+            background: linear-gradient(135deg, #241812 0%, #3a2518 50%, #241812 100%) !important;
+            border: 1px solid rgba(181, 153, 120, 0.4) !important;
+        }
+
+        .urgency-badge .urgency-dot {
+            animation: dotBlink 1.5s ease-in-out infinite;
+            background-color: #e74c3c !important;
+        }
+
+        .urgency-badge .urgency-text {
+            animation: urgencyGlow 2s ease-in-out infinite;
+        }
+
+        /* ===== MOBILE RESULTS CAROUSEL ===== */
+        @media (max-width: 768px) {
+            .results-carousel-wrapper {
+                overflow: hidden;
+                position: relative;
+            }
+            .results-carousel-track {
+                display: flex !important;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                gap: 16px;
+                padding-bottom: 16px;
+            }
+            .results-carousel-track::-webkit-scrollbar {
+                display: none;
+            }
+            .results-carousel-track > div {
+                min-width: 85%;
+                max-width: 85%;
+                scroll-snap-align: center;
+                flex-shrink: 0;
+            }
+            .results-carousel-track > div:first-child {
+                margin-left: 7.5%;
+            }
+            .results-carousel-track > div:last-child {
+                margin-right: 7.5%;
+            }
+
+            /* Carousel dots */
+            .carousel-dots {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 20px;
+            }
+            .carousel-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: rgba(181, 153, 120, 0.3);
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            .carousel-dot.active {
+                background-color: #B59978;
+                width: 24px;
+                border-radius: 4px;
+            }
+        }
+        @media (min-width: 769px) {
+            .carousel-dots {
+                display: none !important;
+            }
+        }
+
         .img-overlap {
             transform: translateY(40px);
         }
@@ -373,9 +468,10 @@
 <div class="max-w-2xl fade-in">
 <span class="text-[12px] font-bold text-secondary uppercase letter-spacing-extra block mb-8">EXPERIÊNCIA PREMIUM</span>
 <h1 class="text-4xl md:text-7xl lg:text-8xl text-primary mb-6 md:mb-8 leading-[1.05] tracking-tight">CLUBE DO BOTOX BAYMA SKIN</h1>
-<p class="headline-font text-xl md:text-3xl italic text-on-surface-variant mb-8 md:mb-10 leading-relaxed">Um ano inteiro de expressão leve, prevenção e cuidados contínuos.</p>
+<p class="headline-font text-xl md:text-3xl italic text-on-surface-variant mb-8 md:mb-10 leading-relaxed">Expressão leve, prevenção e resultados o ano inteiro.</p>
 <p class="text-base md:text-lg text-on-surface-variant/80 max-w-lg mb-10 md:mb-16 leading-relaxed">
-                O Clube do Botox foi criado para todos que valorizam resultados naturais, acompanhamento próximo e um plano estruturado para manter a beleza ao longo do ano. Mais do que aplicações programadas, você passa a contar com uma estratégia contínua de prevenção e rejuvenescimento.
+                <span class="hidden md:inline">O Clube do Botox foi criado para todos que valorizam resultados naturais, acompanhamento próximo e um plano estruturado para manter a beleza ao longo do ano. Mais do que aplicações programadas, você passa a contar com uma estratégia contínua de prevenção e rejuvenescimento.</span>
+                <span class="md:hidden">Resultados naturais com acompanhamento contínuo e plano de cuidados personalizado pela Dra. Renata Bayma.</span>
             </p>
 <div class="flex flex-col sm:flex-row gap-8 items-start">
 <a class="bg-primary text-on-primary text-[11px] md:text-[12px] font-bold px-10 md:px-14 py-5 md:py-7 letter-spacing-widest text-center hover:bg-secondary transition-all shadow-2xl inline-block uppercase w-full sm:w-auto" href="#planos">
@@ -416,7 +512,8 @@
         <span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-6">COMO FUNCIONA</span>
         <h2 class="text-4xl md:text-6xl text-primary mb-10 leading-tight">Como Funciona o Clube</h2>
         <p class="headline-font text-xl text-on-surface-variant italic font-light">
-            O Clube do Botox oferece planos anuais com sessões regulares de aplicação de toxina botulínica, garantindo um cuidado contínuo com a sua aparência. Ao se tornar membro, você recebe um atendimento personalizado, com tratamentos que atendem às suas necessidades específicas.
+            <span class="hidden md:inline">O Clube do Botox oferece planos anuais com sessões regulares de aplicação de toxina botulínica, garantindo um cuidado contínuo com a sua aparência. Ao se tornar membro, você recebe um atendimento personalizado, com tratamentos que atendem às suas necessidades específicas.</span>
+            <span class="md:hidden">Planos anuais com sessões regulares e atendimento personalizado para cuidar da sua aparência o ano todo.</span>
         </p>
     </div>
 
@@ -437,7 +534,8 @@
                         <span class="material-symbols-outlined text-secondary text-2xl hidden md:block">check_circle</span>
                     </div>
                     <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
-                        Descontos especiais e condições exclusivas em outros procedimentos estéticos da clínica ao longo do ano.
+                        <span class="hidden md:inline">Descontos especiais e condições exclusivas em outros procedimentos estéticos da clínica ao longo do ano.</span>
+                        <span class="md:hidden">Descontos e condições exclusivas em procedimentos da clínica.</span>
                     </p>
                 </div>
 
@@ -449,7 +547,8 @@
                         <span class="material-symbols-outlined text-secondary text-2xl hidden md:block">check_circle</span>
                     </div>
                     <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
-                        Manutenção preventiva e contínua dos efeitos do Botox, evitando o retorno total das rugas de expressão.
+                        <span class="hidden md:inline">Manutenção preventiva e contínua dos efeitos do Botox, evitando o retorno total das rugas de expressão.</span>
+                        <span class="md:hidden">Manutenção contínua, sem retorno total das rugas.</span>
                     </p>
                 </div>
             </div>
@@ -471,7 +570,8 @@
                         <h3 class="text-2xl text-primary font-medium">Economia</h3>
                     </div>
                     <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
-                        Descontos e condições de pagamento facilitadas, com parcelamento anual muito mais atrativo que sessões individuais.
+                        <span class="hidden md:inline">Descontos e condições de pagamento facilitadas, com parcelamento anual muito mais atrativo que sessões individuais.</span>
+                        <span class="md:hidden">Parcelamento atrativo — muito melhor que sessões avulsas.</span>
                     </p>
                 </div>
 
@@ -482,7 +582,8 @@
                         <h3 class="text-2xl text-primary font-medium">Conveniência</h3>
                     </div>
                     <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
-                        Agendamentos prioritários para suas sessões de retorno, garantindo flexibilidade e encaixes na sua agenda.
+                        <span class="hidden md:inline">Agendamentos prioritários para suas sessões de retorno, garantindo flexibilidade e encaixes na sua agenda.</span>
+                        <span class="md:hidden">Agendamentos prioritários com flexibilidade na agenda.</span>
                     </p>
                 </div>
             </div>
@@ -536,7 +637,10 @@
 <div class="text-center mb-24 max-w-3xl mx-auto">
 <span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-6">MEMBROS DO CLUBE</span>
 <h2 class="text-4xl md:text-6xl text-primary mb-10 leading-tight">Benefícios Exclusivos</h2>
-<p class="headline-font text-xl text-on-surface-variant italic font-light">Além de fazer parte do Clube do Botox, você recebe cuidados complementares desenvolvidos para potencializar seus resultados.</p>
+<p class="headline-font text-xl text-on-surface-variant italic font-light">
+                    <span class="hidden md:inline">Além de fazer parte do Clube do Botox, você recebe cuidados complementares desenvolvidos para potencializar seus resultados.</span>
+                    <span class="md:hidden">Cuidados complementares que potencializam seus resultados.</span>
+                </p>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 <!-- Bonus 1 -->
@@ -552,8 +656,9 @@
 </div>
 <h3 class="text-3xl text-primary mb-6">Sessões de Estética Regenerativa</h3>
 <p class="text-on-surface-variant leading-relaxed">
-                        Protocolos voltados para estimular a qualidade da pele, promovendo mais viço, luminosidade e aspecto saudável. Uma pele bonita precisa de estímulos constantes para manter sua vitalidade natural.
-                    </p>
+                        <span class="hidden md:inline">Protocolos voltados para estimular a qualidade da pele, promovendo mais viço, luminosidade e aspecto saudável. Uma pele bonita precisa de estímulos constantes para manter sua vitalidade natural.</span>
+                        <span class="md:hidden">Protocolos que estimulam viço, luminosidade e vitalidade da pele.</span>
+                     </p>
 </div>
 </div>
 <!-- Bonus 2 -->
@@ -569,8 +674,9 @@
 </div>
 <h3 class="text-3xl text-primary mb-6">Home Care Exclusivo Assinado</h3>
 <p class="text-on-surface-variant leading-relaxed">
-                        Um protocolo domiciliar cuidadosamente selecionado pela Dra. Renata Bayma para complementar seus resultados e manter sua pele cuidada todos os dias. O cuidado em casa é o pilar da durabilidade.
-                    </p>
+                        <span class="hidden md:inline">Um protocolo domiciliar cuidadosamente selecionado pela Dra. Renata Bayma para complementar seus resultados e manter sua pele cuidada todos os dias. O cuidado em casa é o pilar da durabilidade.</span>
+                        <span class="md:hidden">Protocolo domiciliar selecionado pela Dra. Renata para manter resultados diariamente.</span>
+                     </p>
 </div>
 </div>
 </div>
@@ -584,75 +690,85 @@
             <span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-6">PROVA CLÍNICA</span>
             <h2 class="text-3xl md:text-6xl text-primary mb-8 md:mb-10 leading-tight mobile-heading">Resultados que Falam por Si</h2>
             <p class="headline-font text-xl text-on-surface-variant italic font-light">
-                Resultados naturais, preservando a identidade e expressividade de cada paciente.
+                Resultados naturais que preservam sua identidade.
             </p>
         </div>
 
         <!-- Gallery Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-8 gallery-grid-mobile">
+        <!-- Mobile Carousel / Desktop Grid -->
+        <div class="results-carousel-wrapper">
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-8 gallery-grid-mobile results-carousel-track">
             <!-- Result 1 - Pés de Galinha -->
-            <div class="bg-surface border border-secondary/10 flex flex-col h-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
+            <div class="bg-surface border border-secondary/10 flex flex-col h-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group result-card">
                 <div class="aspect-[4/3] overflow-hidden relative">
                     <img alt="Antes e Depois - Pés de Galinha" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_1.jpg"/>
                     <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">ANTES & DEPOIS</span>
                 </div>
-                <div class="p-4 sm:p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
+                <div class="p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
                     <div>
-                        <h3 class="text-base sm:text-lg lg:text-xl font-medium text-primary mb-3 leading-snug min-h-[2.5rem] sm:min-h-[2.75rem] lg:min-h-[3.25rem] flex items-center">Pés de Galinha</h3>
+                        <h3 class="text-lg lg:text-xl font-medium text-primary mb-2 leading-snug flex items-center">Pés de Galinha</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Suavização das linhas laterais dos olhos, preservando a naturalidade do sorriso e da expressão facial.
+                            Suavização das linhas laterais dos olhos com naturalidade do sorriso preservada.
                         </p>
                     </div>
                 </div>
             </div>
 
             <!-- Result 2 - Rugas Glabelares -->
-            <div class="bg-surface border border-secondary/10 flex flex-col h-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
+            <div class="bg-surface border border-secondary/10 flex flex-col h-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group result-card">
                 <div class="aspect-[4/3] overflow-hidden relative">
                     <img alt="Antes e Depois - Rugas Glabelares" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_2.jpg"/>
                     <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">ANTES & DEPOIS</span>
                 </div>
-                <div class="p-4 sm:p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
+                <div class="p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
                     <div>
-                        <h3 class="text-base sm:text-lg lg:text-xl font-medium text-primary mb-3 leading-snug min-h-[2.5rem] sm:min-h-[2.75rem] lg:min-h-[3.25rem] flex items-center">Rugas Glabelares (Bravo)</h3>
+                        <h3 class="text-lg lg:text-xl font-medium text-primary mb-2 leading-snug flex items-center">Rugas Glabelares (Bravo)</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Tratamento focado na região entre as sobrancelhas, eliminando o aspecto de cansaço ou cara de brava.
+                            Elimina o aspecto de cansaço e "cara de brava" entre as sobrancelhas.
                         </p>
                     </div>
                 </div>
             </div>
 
             <!-- Result 4 - Linhas da Testa -->
-            <div class="bg-surface border border-secondary/10 flex flex-col h-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
+            <div class="bg-surface border border-secondary/10 flex flex-col h-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group result-card">
                 <div class="aspect-[4/3] overflow-hidden relative">
                     <img alt="Antes e Depois - Linhas da Testa" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_4.jpg"/>
                     <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">CASO CLÍNICO</span>
                 </div>
-                <div class="p-4 sm:p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
+                <div class="p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
                     <div>
-                        <h3 class="text-base sm:text-lg lg:text-xl font-medium text-primary mb-3 leading-snug min-h-[2.5rem] sm:min-h-[2.75rem] lg:min-h-[3.25rem] flex items-center">Linhas Horizontais da Testa</h3>
+                        <h3 class="text-lg lg:text-xl font-medium text-primary mb-2 leading-snug flex items-center">Linhas da Testa</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Resultado expressivo na suavização das rugas da testa, sem efeito congelado, mantendo expressão natural.
+                            Suavização expressiva sem efeito congelado. Expressão natural mantida.
                         </p>
                     </div>
                 </div>
             </div>
 
             <!-- Result 6 - Rejuvenescimento Facial -->
-            <div class="bg-surface border border-secondary/10 flex flex-col h-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group">
+            <div class="bg-surface border border-secondary/10 flex flex-col h-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group result-card">
                 <div class="aspect-[4/3] overflow-hidden relative">
                     <img alt="Antes e Depois - Rejuvenescimento Facial" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_6.jpg"/>
                     <span class="absolute top-4 left-4 bg-primary text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase">CASO CLÍNICO</span>
                 </div>
-                <div class="p-4 sm:p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
+                <div class="p-5 md:p-6 border-t border-secondary/5 flex flex-col justify-between flex-1">
                     <div>
-                        <h3 class="text-base sm:text-lg lg:text-xl font-medium text-primary mb-3 leading-snug min-h-[2.5rem] sm:min-h-[2.75rem] lg:min-h-[3.25rem] flex items-center">Rejuvenescimento Facial</h3>
+                        <h3 class="text-lg lg:text-xl font-medium text-primary mb-2 leading-snug flex items-center">Rejuvenescimento Facial</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Suavização das linhas de expressão da face e pescoço, com aparência rejuvenescida e natural.
+                            Face e pescoço rejuvenescidos com aparência natural e harmônica.
                         </p>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Carousel Dots -->
+        <div class="carousel-dots" id="results-dots">
+            <span class="carousel-dot active" data-index="0"></span>
+            <span class="carousel-dot" data-index="1"></span>
+            <span class="carousel-dot" data-index="2"></span>
+            <span class="carousel-dot" data-index="3"></span>
+        </div>
         </div>
     </div>
 </section>
@@ -674,8 +790,9 @@
 </div>
 </div>
 <p class="text-lg text-on-surface-variant leading-relaxed max-w-md">
-                Com planejamento. Com acompanhamento. Com a tranquilidade de saber que sua pele estará sendo cuidada durante todo o ano por quem entende do assunto.
-            </p>
+                <span class="hidden md:inline">Com planejamento. Com acompanhamento. Com a tranquilidade de saber que sua pele estará sendo cuidada durante todo o ano por quem entende do assunto.</span>
+                <span class="md:hidden">Planejamento, acompanhamento e pele cuidada o ano todo.</span>
+             </p>
 </div>
 <div class="lg:col-span-7 relative flex justify-end">
 <div class="w-full lg:w-11/12 aspect-[4/5] overflow-hidden shadow-2xl">
@@ -696,7 +813,7 @@
             <span class="text-[11px] font-bold text-secondary uppercase letter-spacing-extra block mb-6">OPÇÕES DE ASSINATURA</span>
             <h2 class="text-3xl md:text-6xl text-primary mb-8 md:mb-10 leading-tight mobile-heading">Oferta Especial de Lançamento!</h2>
             <p class="headline-font text-xl text-on-surface-variant italic font-light">
-                Escolha o plano estratégico que melhor se adapta aos seus objetivos de beleza.
+                Escolha o plano ideal para seus objetivos.
             </p>
         </div>
 
@@ -979,7 +1096,8 @@
                 <img alt="Dra. Renata Bayma Logo" class="h-12 mb-10 brightness-0" src="logo.png"/>
                 <h3 class="headline-font text-3xl text-primary font-medium mb-6">Agende Sua Consulta</h3>
                 <p class="text-on-surface-variant text-sm md:text-base leading-relaxed mb-10">
-                    Entre em contato conosco para saber mais sobre o Clube do Botox e agendar sua consulta inicial. Nossa equipe está pronta para responder todas as suas perguntas e ajudar você a escolher o plano que melhor atende às suas necessidades.
+                    <span class="hidden md:inline">Entre em contato conosco para saber mais sobre o Clube do Botox e agendar sua consulta inicial. Nossa equipe está pronta para responder todas as suas perguntas e ajudar você a escolher o plano que melhor atende às suas necessidades.</span>
+                    <span class="md:hidden">Fale conosco e escolha o plano ideal para você.</span>
                 </p>
                 <a class="w-full bg-primary text-on-primary text-[11px] font-bold py-6 letter-spacing-widest text-center hover:bg-secondary transition-all uppercase" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20Clube%20do%20Botox%20e%20agendar%20minha%20consulta." target="_blank" rel="noopener noreferrer">
                     AGENDE SUA CONSULTA
@@ -1070,11 +1188,19 @@
 <img alt="Logo" class="h-20 mx-auto mb-16 brightness-0 opacity-80" src="logo.png"/>
 <h2 class="text-3xl md:text-7xl text-primary mb-8 md:mb-10 leading-tight max-w-3xl mx-auto mobile-heading">Sua beleza merece continuidade.</h2>
 <p class="text-xl text-on-surface-variant mb-16 max-w-2xl mx-auto leading-relaxed">
-                Entre para o Clube do Botox Bayma e descubra como é viver um ano inteiro com mais prevenção, mais cuidado e mais confiança.
-            </p>
+                <span class="hidden md:inline">Entre para o Clube do Botox Bayma e descubra como é viver um ano inteiro com mais prevenção, mais cuidado e mais confiança.</span>
+                <span class="md:hidden">Um ano inteiro de prevenção, cuidado e confiança.</span>
+             </p>
+
+<!-- Urgency Badge - Pulsating -->
+<div class="urgency-badge inline-flex items-center gap-3 px-8 py-4 rounded-full mb-10">
+    <span class="urgency-dot w-3 h-3 rounded-full flex-shrink-0"></span>
+    <span class="urgency-text text-[11px] md:text-[12px] font-black text-white uppercase letter-spacing-widest">⚡ ÚLTIMAS VAGAS DISPONÍVEIS — JULHO 2025</span>
+</div>
+
 <a class="inline-block w-full sm:w-auto bg-primary text-on-primary text-[11px] md:text-[12px] font-bold px-10 md:px-16 py-6 md:py-8 letter-spacing-widest hover:bg-secondary transition-all shadow-2xl active:scale-95 uppercase text-center" href="https://wa.me/5581981803520?text=Ol%C3%A1%21%20Quero%20garantir%20minha%20vaga%20no%20Clube%20do%20Botox%20e%20agendar%20minha%20consulta." target="_blank" rel="noopener noreferrer">
                 QUERO GARANTIR MINHA VAGA
-            </a>
+             </a>
 <div class="mt-12 flex items-center justify-center gap-4">
 <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
 <span class="text-[10px] font-bold text-on-surface-variant uppercase letter-spacing-widest">VAGAS EXCLUSIVAS DISPONÍVEIS PARA ESTE MÊS</span>
@@ -1219,5 +1345,50 @@
             header.classList.add('bg-surface/90');
         }
     });
+
+    // Results Carousel - Mobile Only
+    (function() {
+        const track = document.querySelector('.results-carousel-track');
+        const dots = document.querySelectorAll('.carousel-dot');
+        if (!track || dots.length === 0) return;
+
+        function updateDots() {
+            if (window.innerWidth > 768) return;
+            const cards = track.querySelectorAll('.result-card');
+            const scrollLeft = track.scrollLeft;
+            const trackWidth = track.offsetWidth;
+            let closestIndex = 0;
+            let closestDist = Infinity;
+
+            cards.forEach((card, i) => {
+                const cardCenter = card.offsetLeft + card.offsetWidth / 2 - track.offsetLeft;
+                const viewCenter = scrollLeft + trackWidth / 2;
+                const dist = Math.abs(cardCenter - viewCenter);
+                if (dist < closestDist) {
+                    closestDist = dist;
+                    closestIndex = i;
+                }
+            });
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === closestIndex);
+            });
+        }
+
+        track.addEventListener('scroll', updateDots, { passive: true });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.dataset.index);
+                const cards = track.querySelectorAll('.result-card');
+                if (cards[index]) {
+                    cards[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }
+            });
+        });
+
+        // Initial state
+        setTimeout(updateDots, 300);
+    })();
 </script>
 </body></html>
