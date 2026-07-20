@@ -776,10 +776,13 @@
 
             <!-- Result 6 - Rejuvenescimento Facial -->
             <div class="bg-surface border border-secondary/10 flex flex-col h-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] group result-card hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.12)] hover:border-secondary/30 hover:-translate-y-1 transition-all duration-500">
-                <div class="aspect-[4/5] overflow-hidden relative cursor-zoom-in result-image-container" data-title="Rejuvenescimento Facial" data-desc="Face e pescoço com aparência natural e harmônica." data-img="resultado_final_6.jpg">
-                    <img alt="Antes e Depois - Rejuvenescimento Facial" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_6.jpg"/>
-                    <span class="absolute top-4 left-4 bg-primary/90 text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase rounded-sm">CASO CLÍNICO</span>
-                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="aspect-[4/5] overflow-hidden relative cursor-zoom-in result-image-container bg-[#241812]" data-title="Rejuvenescimento Facial" data-desc="Face e pescoço com aparência natural e harmônica." data-img="resultado_final_6.jpg">
+                    <!-- Blurred background image to fill the card height -->
+                    <img alt="" class="absolute inset-0 w-full h-full object-cover blur-md opacity-40 scale-110 pointer-events-none" src="resultado_final_6.jpg"/>
+                    <!-- Contained sharp image showing the entire before/after split screen without zoom/crop -->
+                    <img alt="Antes e Depois - Rejuvenescimento Facial" class="absolute inset-0 w-full h-full object-contain z-10 group-hover:scale-105 transition-transform duration-[2s]" src="resultado_final_6.jpg"/>
+                    <span class="absolute top-4 left-4 bg-primary/90 text-on-primary text-[9px] font-bold px-3 py-1.5 letter-spacing-widest uppercase rounded-sm z-20">CASO CLÍNICO</span>
+                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
                         <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
                     </div>
                 </div>
